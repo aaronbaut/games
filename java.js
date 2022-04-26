@@ -16,5 +16,8 @@ let playerAnswer = playerSelection.toLowerCase()
 function start() {
   playerSelection();
   computerPlay();
-    if playerSelection.toLowerCase() === 'rock' && computerPlay
+    if playerAnswer === 'rock' && computerAnswer === 'rock' ||
+    playerAnswer === 'paper' && computerAnswer === 'paper' ||
+    playerAnswer === 'scissor' && computerAnswer === 'scissor';
+    alert(`${playerAnswer} equals ${computerAnswer}. It's a DRAW!`)
 }

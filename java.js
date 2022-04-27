@@ -24,7 +24,7 @@ function start() {
         playerAnswer === 'scissor' && computerAnswer === 'paper')
     {alert(`${playerAnswer} beats ${computerAnswer}. You win!`)
 }   else if (playerAnswer === 'rock' && computerAnswer === 'paper' ||
-        playerAnswer === 'paper' && computerAnswer === 'scissors' ||
+        playerAnswer === 'paper' && computerAnswer === 'scissor' ||
         playerAnswer === 'scissor' && computerAnswer === 'rock')
         {alert(`${playerAnswer} loses to ${computerAnswer}. You lose`)
 }    else if (playerAnswer === ' ' || playerAnswer === 'null' || playerAnswer === 'undefined')

@@ -6,14 +6,14 @@ function computerPlay() {
   return value;
 }
 let computerAnswer = `${computerPlay()}`
-function playerSelection() {
+
+const foo = function playerSelection() {
   let answer = prompt('rock, paper or scissor?', '')
   return answer;
 }
-let answer = `${playerSelection()}`
-let playerAnswer = answer.toLowerCase()
 function start() {
-  playerSelection();
+    let answer = foo();
+    let playerAnswer = answer.toLowerCase();;
   computerPlay();
     if (playerAnswer === 'rock' && computerAnswer === 'rock' ||
         playerAnswer === 'paper' && computerAnswer === 'paper' ||

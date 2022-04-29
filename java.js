@@ -21,15 +21,17 @@ function playRound(playerAnswer, computerAnswer) {
         {console.log(`${playerAnswer} loses to ${computerAnswer}. You lose`)
 }    else if (playerAnswer === ' ' || playerAnswer === 'null' || playerAnswer === 'undefined')
         {console.log('field empty')
+        
 }
 };
-let computerAnswer = computerPlay();
-let playerAnswer = prompt('rock, paper or scissor?', '')
+
     
 function game() {
     for (let i = 0; i < 5; i++) {
+    let computerAnswer = computerPlay();
+    let playerAnswer = prompt('rock, paper or scissor?', '')
     playRound(playerAnswer, computerAnswer);
-        console.log('Round ${i} out of 5')
+        console.log(`Round ${i} out of 5`)
     }
 }
 game();

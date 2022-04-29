@@ -11,7 +11,7 @@ function playerSelection() {
   return answer;
 }
 
-function start() {
+function playRound() {
     let playerAnswer = playerSelection().toLowerCase();;
     let computerAnswer = `${computerPlay()}`
     if (playerAnswer === 'rock' && computerAnswer === 'rock' ||
@@ -30,4 +30,4 @@ function start() {
         {alert('field empty')
 }
 };
-start();
+playRound();

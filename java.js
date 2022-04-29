@@ -5,16 +5,14 @@ function computerPlay() {
   let value = hand[Math.floor(Math.random() * hand.length)];
   return value;
 }
-let computerAnswer = `${computerPlay()}`
 
 const foo = function playerSelection() {
   let answer = prompt('rock, paper or scissor?', '')
   return answer;
 }
 function start() {
-    let answer = foo();
-    let playerAnswer = answer.toLowerCase();;
-  computerPlay();
+    let playerAnswer = foo().toLowerCase();;
+    let computerAnswer = `${computerPlay()}`
     if (playerAnswer === 'rock' && computerAnswer === 'rock' ||
         playerAnswer === 'paper' && computerAnswer === 'paper' ||
         playerAnswer === 'scissor' && computerAnswer === 'scissor')

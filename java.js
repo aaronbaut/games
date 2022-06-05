@@ -27,13 +27,13 @@ function playRound(playerAnswer, computerAnswer) {
 
     
 function game() {
-    for (let i = 0; i < 5; i++) {
+
     let computerAnswer = computerPlay();
     let playerAnswer = prompt('rock, paper or scissor?', '')
     playRound(playerAnswer, computerAnswer);
         console.log(`Round ${i} out of 5`)
     }
-}
+
 game();
 
 

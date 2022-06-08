@@ -1,4 +1,4 @@
-//Make a function computerPlay to randomly choose rock paper or scissors
+//Make a function computerPlay to randomly ccomputerSelectionhoose rock paper or scissors
 
 let hand = ['rock', 'paper', 'scissor'];
 function computerPlay() {
@@ -6,31 +6,29 @@ function computerPlay() {
   return value;
 }
 
-function playerSelection() {
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach((button) => {
+const buttons = document.querySelectorAll('button');
+    let playerSelection = buttons.forEach((button) => {
         button.addEventListener('click', () => {
+            playRound()
             return button.id;
         });
     });
-}
-
+   
 
 function playRound() {
-    let playerSelection = playerSelection();
-    let computerSelection = computerPlay();
-    if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock' ||
-        playerSelection.toLowerCase() === 'paper' && computerSelection === 'paper' ||
-        playerSelection.toLowerCase() === 'scissor' && computerSelection === 'scissor')
-        {console.log(`${playerSelection} equals ${computerSelection}. It's a DRAW!`)
-}   else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissor' ||
-        playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock' ||
-        playerSelection.toLowerCase() === 'scissor' && computerSelection === 'paper')
-    {console.log(`${playerSelection} beats ${computerSelection}. You win!`)
-}   else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper' ||
-        playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissor' ||
-        playerSelection.toLowerCase() === 'scissor' && computerSelection === 'rock')
-        {console.log(`${playerSelection} loses to ${computerSelection}. You lose`)
+    
+    if (playerSelection === 'rock' && computerPlay === 'rock' ||
+        playerSelection === 'paper' && computerPlay === 'paper' ||
+        playerSelection === 'scissor' && computerPlay === 'scissor')
+        {console.log(`${playerSelection} equals ${computerPlay}. It's a DRAW!`)
+}   else if (playerSelection === 'rock' && computerPlay === 'scissor' ||
+        playerSelection === 'paper' && computerPlay === 'rock' ||
+        playerSelection === 'scissor' && computerPlay === 'paper')
+    {console.log(`${playerSelection} beats ${computerPlay}. You win!`)
+}   else if (playerSelection === 'rock' && computerPlay === 'paper' ||
+        playerSelection === 'paper' && computerPlay === 'scissor' ||
+        playerSelection === 'scissor' && computerPlay === 'rock')
+        {console.log(`${playerSelection} loses to ${computerPlay}. You lose`)
 }    else if (playerSelection === ' ' || playerSelection === 'null' || playerSelection === 'undefined')
         {console.log('field empty')
         
@@ -40,9 +38,9 @@ function playRound() {
     
 // function game() {
 
-//     let computerSelection = computerPlay();
+//     let computerPlay = computerPlay();
 //     let playerSelection = prompt('rock, paper or scissor?', '')
-//     playRound(playerSelection, computerSelection);
+//     playRound(playerSelection, computerPlay);
 //         console.log(`Round ${i} out of 5`)
 //     }
 
@@ -55,20 +53,20 @@ function playRound() {
 // }
 
 // function playRound() {
-//     let playerSelection = playerSelection().toLowerCase();;
-//     let computerSelection = `${computerPlay()}`
-//     if (playerSelection === 'rock' && computerSelection === 'rock' ||
-//         playerSelection === 'paper' && computerSelection === 'paper' ||
-//         playerSelection === 'scissor' && computerSelection === 'scissor')
-//         {alert(`${playerSelection} equals ${computerSelection}. It's a DRAW!`)
-// }   else if (playerSelection === 'rock' && computerSelection === 'scissor' ||
-//         playerSelection === 'paper' && computerSelection === 'rock' ||
-//         playerSelection === 'scissor' && computerSelection === 'paper')
-//     {alert(`${playerSelection} beats ${computerSelection}. You win!`)
-// }   else if (playerSelection === 'rock' && computerSelection === 'paper' ||
-//         playerSelection === 'paper' && computerSelection === 'scissor' ||
-//         playerSelection === 'scissor' && computerSelection === 'rock')
-//         {alert(`${playerSelection} loses to ${computerSelection}. You lose`)
+//     let playerSelection = playerSelection();;
+//     let computerPlay = `${computerPlay()}`
+//     if (playerSelection === 'rock' && computerPlay === 'rock' ||
+//         playerSelection === 'paper' && computerPlay === 'paper' ||
+//         playerSelection === 'scissor' && computerPlay === 'scissor')
+//         {alert(`${playerSelection} equals ${computerPlay}. It's a DRAW!`)
+// }   else if (playerSelection === 'rock' && computerPlay === 'scissor' ||
+//         playerSelection === 'paper' && computerPlay === 'rock' ||
+//         playerSelection === 'scissor' && computerPlay === 'paper')
+//     {alert(`${playerSelection} beats ${computerPlay}. You win!`)
+// }   else if (playerSelection === 'rock' && computerPlay === 'paper' ||
+//         playerSelection === 'paper' && computerPlay === 'scissor' ||
+//         playerSelection === 'scissor' && computerPlay === 'rock')
+//         {alert(`${playerSelection} loses to ${computerPlay}. You lose`)
 // }    else if (playerSelection === ' ' || playerSelection === 'null' || playerSelection === 'undefined')
 //         {alert('field empty')
 

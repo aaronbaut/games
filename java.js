@@ -6,7 +6,19 @@ function computerPlay() {
   return value;
 }
 
-function playRound(playerSelection, computerSelection) {
+function playerSelection() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            return button.id;
+        });
+    });
+}
+
+
+function playRound() {
+    let playerSelection = playerSelection();
+    let computerSelection = computerPlay();
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock' ||
         playerSelection.toLowerCase() === 'paper' && computerSelection === 'paper' ||
         playerSelection.toLowerCase() === 'scissor' && computerSelection === 'scissor')

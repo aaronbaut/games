@@ -22,19 +22,16 @@ function playRound(userSelection,computerSelection) {
     if (userSelection === 'rock' && computerSelection === 'rock' ||
         userSelection === 'paper' && computerSelection === 'paper' ||
         userSelection === 'scissor' && computerSelection === 'scissor')
-        {results.innerHTML = `${userSelection} equals ${computerSelection}. It's a DRAW!`
+        {results.innerText = `${userSelection} equals ${computerSelection}. It's a DRAW!`
 }   else if (userSelection === 'rock' && computerSelection === 'scissor' ||
         userSelection === 'paper' && computerSelection === 'rock' ||
         userSelection === 'scissor' && computerSelection === 'paper')
-    {results.innerhtml = `${userSelection} beats ${computerSelection}. You win!`
+    {results.innerText = `${userSelection} beats ${computerSelection}. You win!`
 }   else if (userSelection === 'rock' && computerSelection === 'paper' ||
         userSelection === 'paper' && computerSelection === 'scissor' ||
         userSelection === 'scissor' && computerSelection === 'rock')
-        {results.innerhtml = `${userSelection} loses to ${computerSelection}. You lose`
-}    else if (userSelection === ' ' || userSelection === 'null' || userSelection === 'undefined')
-        {results.innerhtml = 'field empty'
+        {results.innerText = `${userSelection} loses to ${computerSelection}. You lose`
         
-}
 };
 
 

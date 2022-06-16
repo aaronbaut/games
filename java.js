@@ -19,32 +19,28 @@ const buttons = document.querySelectorAll('button');
         });
 
 function playRound(userSelection,computerSelection) {
-    let outcome;
     if (userSelection === 'rock' && computerSelection === 'rock' ||
         userSelection === 'paper' && computerSelection === 'paper' ||
         userSelection === 'scissor' && computerSelection === 'scissor')
-        {outcome = `${userSelection} equals ${computerSelection}. It's a DRAW!`
+        {results.innerHTML = `${userSelection} equals ${computerSelection}. It's a DRAW!`
 }   else if (userSelection === 'rock' && computerSelection === 'scissor' ||
         userSelection === 'paper' && computerSelection === 'rock' ||
         userSelection === 'scissor' && computerSelection === 'paper')
-    {outcome = `${userSelection} beats ${computerSelection}. You win!`
+    {results.innerhtml = `${userSelection} beats ${computerSelection}. You win!`
 }   else if (userSelection === 'rock' && computerSelection === 'paper' ||
         userSelection === 'paper' && computerSelection === 'scissor' ||
         userSelection === 'scissor' && computerSelection === 'rock')
-        {outcome = `${userSelection} loses to ${computerSelection}. You lose`
+        {results.innerhtml = `${userSelection} loses to ${computerSelection}. You lose`
 }    else if (userSelection === ' ' || userSelection === 'null' || userSelection === 'undefined')
-        {outcome = 'field empty'
+        {results.innerhtml = 'field empty'
         
 }
-    return outcome;
 };
 
-let playResult = playRound();
 
 const content = document.querySelector('body')
 const results = document.createElement('div')
 results.classList.add('results')
-results.innerHTML = '${playResult}';
 
 content.appendChild(results);
 

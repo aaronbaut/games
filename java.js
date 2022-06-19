@@ -40,6 +40,11 @@ const content = document.querySelector('body');
 const results = document.createElement('div');
 results.classList.add('results');
 content.appendChild(results);
-const score = document.createElement('div');
-score.classList.add('score');
-content.appendChild(score);
+const myScore = document.createElement('div');
+myScore.classList.add('myScore');
+myScore.innerText = 'My wins: '
+content.appendChild(myScore);
+const cpuScore = document.createElement('div');
+cpuScore.classList.add('cpuScore')
+cpuScore.innerText = 'Computer wins:'
+content.appendChild(cpuScore);

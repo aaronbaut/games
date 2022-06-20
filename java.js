@@ -15,6 +15,7 @@ const buttons = document.querySelectorAll('button');
             let computerSelection = computerPlay();
             playRound(userSelection,computerSelection);
             keepScore();
+            announceWinner();
             });
         });
 
@@ -57,4 +58,15 @@ function keepScore() {
         result2 += 1;
         return cpuScore.innerText = `Computer wins: ${result2}`
     }
+};
+
+function announceWinner() {
+    if (result1 == 5) {
+      return myScore.innerText += ' WINNER!'
+    } else if (result2 == 5) {
+      return cpuScore.innerText += ' CPU wins, you lose!'
+    }
 }
+
+
+

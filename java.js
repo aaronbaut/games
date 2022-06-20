@@ -14,7 +14,7 @@ const buttons = document.querySelectorAll('button');
            let userSelection = e.target.id
             let computerSelection = computerPlay();
             playRound(userSelection,computerSelection);
-        
+            keepScore();
             });
         });
 
@@ -48,3 +48,12 @@ const cpuScore = document.createElement('div');
 cpuScore.classList.add('cpuScore')
 cpuScore.innerText = 'Computer wins:'
 content.appendChild(cpuScore);
+
+function keepScore() {
+    if (results.innerText.includes('win')) {
+        return myScore.innerText += '1';
+}  else if (results.innerText.includes('lose')) {
+        return cpuScore.innerText += '1'
+}
+
+}

@@ -35,25 +35,26 @@ function playRound(userSelection,computerSelection) {
 };
 };
 
-
 const content = document.querySelector('body');
 const results = document.createElement('div');
-results.classList.add('results');
+results.classList.add('results')
 content.appendChild(results);
 const myScore = document.createElement('div');
-myScore.classList.add('myScore');
-myScore.innerText = 'My wins: '
+myScore.getAttribute('id', 'myScore');
 content.appendChild(myScore);
 const cpuScore = document.createElement('div');
-cpuScore.classList.add('cpuScore')
-cpuScore.innerText = 'Computer wins:'
+cpuScore.setAttribute('id', 'cpuScore')
 content.appendChild(cpuScore);
+
+let result1 = 0;
+let result2 = 0;
 
 function keepScore() {
     if (results.innerText.includes('win')) {
-        return myScore.innerText += '1';
-}  else if (results.innerText.includes('lose')) {
-        return cpuScore.innerText += '1'
-}
-
+        result1 += 1;
+        return myScore.innerText = `My wins: ${result1}`
+    }  else if (results.innerText.includes('lose')) {
+        result2 += 1;
+        return cpuScore.innerText = `Computer wins: ${result2}`
+    }
 }
